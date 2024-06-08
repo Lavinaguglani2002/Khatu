@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+;
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: "Poppins", sans-serif;
+
+}
+body{
+  background-color: black;
+}
+@keyframes blink-text {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink-button {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes slidein-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes menu-transition {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-blink-text {
+  animation: blink-text 1s infinite alternate;
+}
+
+.animate-blink-button {
+  animation: blink-button 1s 2s infinite alternate;
+}
+
+.animate-slidein-left {
+  animation: slidein-left 1s ease-in-out forwards;
+}
+
+.animate-menu-transition {
+  animation: menu-transition 1s ease-in-out forwards;
+}
+/* index.css */
+
+/* Apply background image to the header */
+.header {
+  background-image: url('C:\\Users\\Allied\\Desktop\\commerce\\client\\src\\components\\back.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.zoom-in {
+  transform: scale(1.1); /* Adjust scale value as needed for zoom effect */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
+}
+.image-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent images from wrapping */
+}
+
+.image-scroll {
+  display: inline-flex; /* Make images display in a row */
+  gap: 10px; /* Adjust the gap between images */
+}
+
+.card-image {
+  width: 400px; /* Set the width of each image */
+  height: 300px; /* Set the height of each image */
+}
+.animate-image {
+  animation: image-animation 0.5s ease-in-out forwards;
+}
+
+@keyframes image-animation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+
+.bg-black {
+  cursor: pointer;
+}
+
+.bg-black:hover {
+  filter: brightness(90%);
+}
+
+/* Achievements.css */
+
+.transition-opacity {
+  transition: opacity 0.5s ease-in-out; /* Adjust duration and timing function as needed */
+}
+
+.transition-opacity:hover {
+  opacity: 0.5; /* Adjust the opacity value when hovering */
+}
+/* Achievements.css */
+
+.cursive-font {
+  font-family: cursive;
+}
+
+/* Achievements.css */
+
+
+.visible {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Achievements.css */
+
+.btn {
+  background-color: #4CAF50; /* Green background */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.btn.active {
+  border: 2px solid #4CAF50; /* Green border when active */
+}
